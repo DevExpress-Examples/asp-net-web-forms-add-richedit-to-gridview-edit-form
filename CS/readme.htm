@@ -1,0 +1,39 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>How to use ASPxRichEdit to edit RTF data in ASPxGridView's EditForm - Developer Express Example</title>
+<style>
+html, body, form
+{
+	font-family: Tahoma, Arial, Verdana;
+    font-size: small;
+    color: #303440;
+}
+h1 {
+	font-size: 125%;
+	font-weight: normal;
+	color: Black;
+	letter-spacing: 101%;
+}
+</style>
+</head>
+<body>
+<h1>Developer Express Example<br />How to use ASPxRichEdit to edit RTF data in ASPxGridView's EditForm</h1>
+<p>This example is based on the http://www.devexpress.com/scid=E4257 one. It illustrates how to accomplish the same task using a new ASPxRichEdit control instead of the ASPxHtmlEditor one:
+- Add ASPxRichEdit into the related column's EditItemTemplate;
+- Handle the ASPxRichEdit.Init event. 
+- When editing an existing row, use the corresponding ASPxRichEdit.Open (https://documentation.devexpress.com/#AspNet/DevExpressWebASPxRichEditASPxRichEdit_Opentopic) method overload;
+    - Pass the documentId value to identify the document to open (for example, generated based on the editing row key/guid). For per-user editing, construct the DocumentID using the row's key plus user info, for example, System.Web.UI.User.Identity.Name. Then, close the document for editing by this DocumentID for this user only;
+    - Return a stream or an array of bytes value from the 3-rd parameter created from the underlying column value;
+- Handle the ASPxGridView RowInserting/RowUpdating events:
+    - Retrieve the modified rich text content from ASPxRichEdit via the ASPxRichEdit.SaveCopy (https://documentation.devexpress.com/#AspNet/DevExpressWebASPxRichEditASPxRichEdit_SaveCopytopic) method;
+    - Save it back to the database in the required format (a string or an array of bytes value).
+
+Note that data modifications are not allowed in online demos. To allow editing in local/offline mode, download the example and comment out the "throw..." operation in the ASPxGridView.RowUpdating event handler.
+
+See Also:
+http://www.devexpress.com/scid=E4257</p>
+<p>You can find sample updates and versions for different programming languages here:<br /><a href="http://www.devexpress.com/example=T260978">http://www.devexpress.com/example=T260978</a>.</p>
+</body>
+</html>
