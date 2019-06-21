@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 <!-- default file list end -->
 # How to use ASPxRichEdit to edit RTF data in ASPxGridView's EditForm
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t260978/)**
+<!-- run online end -->
 
 
 This example is based on the <a href="https://www.devexpress.com/Support/Center/p/E4257">How to use ASPxHtmlEditor to edit RTF data</a> one. It illustrates how to accomplish the same task using a new ASPxRichEdit control instead of the ASPxHtmlEditor one
