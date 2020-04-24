@@ -8,12 +8,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+	<script type="text/javascript">
+        function OnRichEditInit(s, e) {
+            s.requestSettings.pendingPeriod = 1;
+        }
+        function OnGridBeginCallback(s, e) {
+            if (e.command == "UPDATEEDIT")
+                re.updateWatcherHelper.HasChanges = function () { return false; }
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <dx:ASPxGridView ID="gv" runat="server" AutoGenerateColumns="False" DataSourceID="ads"
-        KeyFieldName="ID" OnRowUpdating="gv_RowUpdating" OnCustomErrorText="gv_CustomErrorText"
-        OnRowInserting="gv_RowInserting" OnAfterPerformCallback="gv_AfterPerformCallback">
+            KeyFieldName="ID" OnRowUpdating="gv_RowUpdating" OnCustomErrorText="gv_CustomErrorText"
+            OnRowInserting="gv_RowInserting" OnAfterPerformCallback="gv_AfterPerformCallback">
+            <ClientSideEvents BeginCallback="OnGridBeginCallback" />
         <Columns>
             <dx:GridViewCommandColumn VisibleIndex="0" ShowNewButton="true" ShowEditButton="True"
                 ShowDeleteButton="true" />
@@ -27,8 +37,9 @@
             <dx:GridViewDataTextColumn FieldName="RtfContent" VisibleIndex="4" Visible="false">
                 <EditFormSettings Visible="True" />
                 <EditItemTemplate>
-                    <dx:ASPxRichEdit ID="re" runat="server" OnInit="re_Init">
-                    </dx:ASPxRichEdit>
+                    <dx:ASPxRichEdit ID="re" runat="server" OnInit="re_Init" ClientInstanceName="re">
+                            <ClientSideEvents Init="OnRichEditInit" />
+                        </dx:ASPxRichEdit>
                 </EditItemTemplate>
             </dx:GridViewDataTextColumn>
         </Columns>
