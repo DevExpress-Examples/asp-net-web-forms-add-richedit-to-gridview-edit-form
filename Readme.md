@@ -48,4 +48,4 @@ Follow the steps below to add the Rich Text Editor in the Grid View's edit form:
 
 ## More Examples
 
-* [Grid View for ASP.NET Web Forms - How to use the HTML Editor to edit RTF data in the Edit Form](https://www.devexpress.com/Support/Center/p/E4257)
+* [Grid View for ASP.NET Web Forms - How to use the HTML Editor to edit formatted text in the Edit Form](https://www.devexpress.com/Support/Center/p/E4257)
