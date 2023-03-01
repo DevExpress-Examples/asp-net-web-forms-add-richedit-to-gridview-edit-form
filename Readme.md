@@ -9,10 +9,10 @@
 
 This example demonstrates how to add the [Rich Text Editor](https://docs.devexpress.com/AspNet/17721/components/rich-text-editor) to the [Grid View](https://docs.devexpress.com/AspNet/5823/components/grid-view) control's edit form. The Rich Text Editor displays RTF data from the data source bound to the Grid View and allows users to modify this data.
 
-![Rich Text Editor in the Edit Form](rich-edit-in-grid-view-edit-form.png)
-
 > **Note**  
 > Data modification is not allowed in online version of this example. To allow editing, download the example and comment out the [throw](./CS/Default.aspx.cs#L97) expression in the `RowUpdating` event handler.
+
+![Rich Text Editor in the Edit Form](rich-edit-in-grid-view-edit-form.png)
 
 ## Overview
 
@@ -28,7 +28,7 @@ Follow the steps below to add the Rich Text Editor in the Grid View's edit form:
 
 5.  To prevent synchronization problems, handle the Rich Text Editor's client-side [Init](https://docs.devexpress.com/AspNet/js-ASPxClientControlBase.Init) event and the Grid View's client-side [BeginCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BeginCallback) event as follows:
 
-    ```
+    ```js
     function OnRichEditInit(s, e) {
         s.requestSettings.pendingPeriod = 1;
     }
