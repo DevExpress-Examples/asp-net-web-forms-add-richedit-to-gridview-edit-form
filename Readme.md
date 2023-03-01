@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T260978)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Grid View for ASP.NET Web Forms - How to use the Rich Text Editor to edit RTF data in the Edit Form
+# Grid View for ASP.NET Web Forms - How to use the Rich Text Editor to edit formatted text in the Edit Form
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t260978/)**
 <!-- run online end -->
@@ -18,7 +18,7 @@ Follow the steps below to add the Rich Text Editor in the Grid View's edit form:
 
 1. Create the [Grid View](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) control, populate it with columns, and bind the control to a data source.
 
-2. Add the [Rich Text Editor](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) control to the [EditItemTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.EditItemTemplate?p=netframework) of the column that contains RTF data.
+2. Add the [Rich Text Editor](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) control to the [EditItemTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.EditItemTemplate?p=netframework) of the column that contains formatted text.
 
 3. Handle the Rich Text Editor control's [Init](https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.control.init?view=netframework-4.8.1) event that occurs after the edit form appears. Use the Grid View's [IsNewRowEditing](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.IsNewRowEditing?p=netframework) property to identify if the edit form appeared in response to a click on the **New** or **Edit** button. If a user clicked the **New** button, assign a new unique identifier to the Rich Text Editor's [DocumentId](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit.DocumentId?p=netframework) property. Otherwise, get a formatted text string from the corresponding cell and pass the string and the row key to the control's [Open](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit.Open(System.String-DevExpress.XtraRichEdit.DocumentFormat-System.Func-System.Byte---)) method.
 
