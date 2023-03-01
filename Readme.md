@@ -7,10 +7,10 @@
 **[[Run Online]](https://codecentral.devexpress.com/t260978/)**
 <!-- run online end -->
 
-This example demonstrates how to add the [Rich Text Editor](https://docs.devexpress.com/AspNet/17721/components/rich-text-editor) to the [Grid View](https://docs.devexpress.com/AspNet/5823/components/grid-view) control's edit form. The Rich Text Editor displays RTF data from the data source bound to the Grid View and allows users to modify this data.
+This example demonstrates how to add the [Rich Text Editor](https://docs.devexpress.com/AspNet/17721/components/rich-text-editor) to the [Grid View](https://docs.devexpress.com/AspNet/5823/components/grid-view) control's edit form. The Rich Text Editor displays formatted text loaded from the data source bound to the Grid View and allows users to edit this text.
 
 > **Note**  
-> Data modification is not allowed in an online version of this example. To allow editing, download the example and comment out the [throw](./CS/Default.aspx.cs#L97) expression in the `RowUpdating` event handler.
+> Data modification is not allowed in the online version of this example. To allow edit operations, download the example and comment out the [throw](./CS/Default.aspx.cs#L97) expression in the `RowUpdating` event handler.
 
 ## Overview
 
