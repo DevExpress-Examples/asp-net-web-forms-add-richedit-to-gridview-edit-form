@@ -12,8 +12,6 @@ This example demonstrates how to add the [Rich Text Editor](https://docs.devexpr
 > **Note**  
 > Data modification is not allowed in online version of this example. To allow editing, download the example and comment out the [throw](./CS/Default.aspx.cs#L97) expression in the `RowUpdating` event handler.
 
-![Rich Text Editor in the Edit Form](rich-edit-in-grid-view-edit-form.png)
-
 ## Overview
 
 Follow the steps below to add the Rich Text Editor in the Grid View's edit form:
