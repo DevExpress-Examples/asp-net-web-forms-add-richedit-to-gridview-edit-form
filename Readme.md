@@ -24,7 +24,7 @@ Follow the steps below to add the Rich Text Editor in the Grid View's edit form:
 
 4. Handle the Grid View's [RowInserting](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.RowInserting?p=netframework) and [RowUpdating](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.RowUpdating?p=netframework) events. In both event handlers, call the Rich Text Editor's [SaveCopy](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit.SaveCopy(DevExpress.XtraRichEdit.DocumentFormat)) method to get document content in RTF, then save the content back to the data source.
 
-5. To prevent synchronization problems, handle the Rich Text Editor's client-side [Init](https://docs.devexpress.com/AspNet/js-ASPxClientControlBase.Init) event and the Grid View's client-side [BeginCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BeginCallback) event as follows:
+5. To prevent synchronization issues, handle the Rich Text Editor's client-side [Init](https://docs.devexpress.com/AspNet/js-ASPxClientControlBase.Init) event and the Grid View's client-side [BeginCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BeginCallback) event as follows:
 
     ```js
     function OnRichEditInit(s, e) {
