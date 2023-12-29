@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Grid View for ASP.NET Web Forms - How to use the Rich Text Editor to edit formatted text in the Edit Form
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128543510/)**
-<!-- run online end -->
 
 This example demonstrates how to add the [Rich Text Editor](https://docs.devexpress.com/AspNet/17721/components/rich-text-editor) to the [Grid View](https://docs.devexpress.com/AspNet/5823/components/grid-view) control's edit form. The Rich Text Editor displays formatted text loaded from the data source bound to the Grid View and allows users to edit this text.
 
